@@ -1,0 +1,9 @@
+A project for a self paced Python class I took.
+
+The starting point of the program is in catmouse.py
+
+The program is run from the command line and launches a Python Tkinter GUI. The goal of the program is to have a "cat" chase a "mouse" around a point until the mouse gets caught. Specifics of the rules of the game are located in the code as comments. An example call to the program is:
+python catmouse.py 0 180 4
+
+The general format is:
+python catmouse.py  [mouse angle in degrees] [cat angle in degrees] [integer for cat radius]

@@ -1,0 +1,121 @@
+Script started on Mon Oct 22 01:19:08 2012                                                                                       python catmouse.py 1 35 396
+the mouse has been eaten!
+A = 40.9259039966
+B = 39.7857935387
+C = 39.7322419234
+the mouse has been eaten!
+A = 39.7322419234
+B = 38.8308638802
+C = 38.5385798502
+the mouse has been eaten!
+A = 38.5385798502
+B = 37.8759342216
+C = 37.344917777
+the mouse has been eaten!
+A = 37.344917777
+B = 36.9210045631
+C = 36.1512557039
+the mouse has been eaten!
+A = 36.1512557039
+B = 35.9660749045
+C = 34.9575936307                                                                                       python catmouse.py 8.1 0 45cat can see mouse, reducing radius
+cat angle = 351.305424405
+mouse angle = 347.704220487
+cat can see mouse, reducing radius
+cat angle = 341.386260698
+mouse angle = 290.408440974
+cat can see mouse, reducing radius
+cat angle = 282.877250881
+mouse angle = 3.92954340842
+cat can see mouse, reducing radius
+cat angle = 269.068219054
+mouse angle = 306.633763895
+cat can see mouse, reducing radius
+cat angle = 251.891130684
+mouse angle = 249.337984382
+cat can see mouse, reducing radius
+cat angle = 229.173046065
+mouse angle = 192.042204869
+cat can see mouse, reducing radius
+cat angle = 195.636825914
+mouse angle = 134.746425356
+cat can see mouse, reducing radius
+cat angle = 131.613132897
+mouse angle = 77.450645843
+the mouse has been eaten!
+A = 221.845504356
+B = 220.681613352
+C = 220.651842283
+the mouse has been eaten!
+A = 220.651842283
+B = 219.726683693
+C = 219.45818021
+the mouse has been eaten!
+A = 219.45818021
+B = 218.771754035
+C = 218.264518137
+the mouse has been eaten!
+A = 218.264518137
+B = 217.816824376
+C = 217.070856064
+the mouse has been eaten!
+A = 217.070856064
+B = 216.861894718
+C = 215.877193991
+[1m[7m%[27m[1m[0m                                                                                         python catmouse.py 8.1 150 240
+cat can see mouse, reducing radius
+cat angle = 141.305424405
+mouse angle = 182.704220487
+cat can see mouse, reducing radius
+cat angle = 131.386260698
+mouse angle = 125.408440974
+cat can see mouse, reducing radius
+cat angle = 119.841004581
+mouse angle = 68.1126614608
+cat can see mouse, reducing radius
+cat angle = 35.8165566836
+mouse angle = 84.3379843823
+cat can see mouse, reducing radius
+cat angle = 18.6394683133
+mouse angle = 27.0422048692
+cat can see mouse, reducing radius
+cat angle = 355.921383695
+mouse angle = 329.746425356
+cat can see mouse, reducing radius
+cat angle = 322.385163543
+mouse angle = 272.450645843
+cat can see mouse, reducing radius
+cat angle = 258.361470527
+mouse angle = 215.15486633
+the mouse has been eaten!
+A = 43.5022973525
+B = 42.3125981321
+C = 42.3086352793
+the mouse has been eaten!
+A = 42.3086352793
+B = 41.3576684736
+C = 41.1149732061
+the mouse has been eaten!
+A = 41.1149732061
+B = 40.402738815
+C = 39.9213111329
+the mouse has been eaten!
+A = 39.9213111329
+B = 39.4478091565
+C = 38.7276490597
+the mouse has been eaten!
+A = 38.7276490597
+B = 38.4928794979
+C = 37.5339869865
+[1m[7m%[27m[1m[0m                                                                                         python catmouse.py 4 0 -57
+cat can see mouse, reducing radius
+cat angle = 252.868828931
+mouse angle = 319.225322922
+cat can see mouse, reducing radius
+cat angle = 229.393474825
+mouse angle = 261.929543408
+cat can see mouse, reducing radius
+cat angle = 194.180443666
+mouse angle = 204.633763895
+[1m[7m%[27m[1m[0m                                                                                         
+Script done on Mon Oct 22 01:21:03 2012

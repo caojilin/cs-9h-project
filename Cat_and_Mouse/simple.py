@@ -1,9 +1,8 @@
-from Tkinter import *                  # Import everything from Tkinter
+from tkinter import *                  # Import everything from Tkinter
 from Arena   import Arena              # Import our Arena
 from Turtle  import Turtle             # Import our Turtle
 from Vector  import *                  # Import everything from our Vector
-from WalkingTurtle import *
-from Color import *
+from WalkingTurtle import WalkingTurtle
 
 tk = Tk()                              # Create a Tk top-level widget
 arena = Arena(tk)                      # Create an Arena widget, arena
