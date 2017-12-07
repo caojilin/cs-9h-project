@@ -1,7 +1,7 @@
 from Turtle import Turtle
 from Vector import *
 from Color import *
-from statue import scale_factor
+from statue import *
 import math
 
 class Mouse(Turtle):       #### Inherit behavior from Turtle
@@ -11,9 +11,8 @@ class Mouse(Turtle):       #### Inherit behavior from Turtle
         """
         Create mouse with given heading. Calls turtle init function.
         """
-        self.heading = heading
+        # self.heading = heading
         self.originalHeading = heading
-        self.originalColor = fill
         # coordinate formula is ( r * cos(angle), r * sin(angle) )
         position = Vector(200 + scale_factor * math.cos(heading*pi/180), 200 + scale_factor * math.sin(heading*pi/180))
         self.originalPosition = position

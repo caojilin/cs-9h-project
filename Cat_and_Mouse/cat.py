@@ -14,8 +14,6 @@ class Cat(Turtle):       #### Inherit behavior from Turtle
         self.originalHeading = heading
         self.radius = radius
         self.originalRadius = radius
-        self.originalColor = fill
-        self.color = fill
         position = Vector(200 + radius * math.cos(heading*pi/180), 200 + radius * math.sin(heading*pi/180))
         self.originalPosition = position
         Turtle.__init__(self, position, heading, fill=fill, **style)
@@ -38,7 +36,7 @@ class Cat(Turtle):       #### Inherit behavior from Turtle
             self.radius -= scale_factor         # reduce radius by 1 meter
             if self.radius < scale_factor:      # if radius is smaller than statue, increase back to statue's radius
                 self.radius = scale_factor
-            
+
             #print 'new radius =',self.radius/scale_factor
 
             # calculate new coordinates with new radius, but same heading
@@ -103,4 +101,3 @@ class Cat(Turtle):       #### Inherit behavior from Turtle
         self.heading = self.originalHeading
         self.radius = self.originalRadius
         self.position = self.originalPosition
-        self.color = self.originalColor

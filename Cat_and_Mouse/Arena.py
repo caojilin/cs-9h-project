@@ -8,17 +8,8 @@ import sys
 class Arena(Frame):
     """This class provides the user interface for an arena of turtles."""
 
-    def __init__(self, parent, width=600, height=600, **options):
+    def __init__(self, parent, width=700, height=700, **options):
         Frame.__init__(self, parent, **options)
-
-        # being added section
-        mbutton = Menubutton(self, text='File') # create File button
-        picks   = Menu(mbutton) # create Menu
-        mbutton.config(menu=picks) # add File button to Menu
-        picks.add_command(label='About', command=self.aboutMenu) # add About button to File
-        picks.add_command(label='Quit', command=sys.exit) # add Quit button to File
-        mbutton.pack(anchor=NW)
-        mbutton.config(bg='white', bd=4, relief=RAISED)
 
         self.time = 0 # create integer timer
         self.timeVar = StringVar() # create timer display variable (automatically updates widget)
@@ -47,8 +38,6 @@ class Arena(Frame):
         Button(self, text='run', command=self.run).pack(side=LEFT)
         Button(self, text='stop', command=self.stop).pack(side=LEFT)
         Button(self, text='quit', command=parent.quit).pack(side=LEFT)
-        Button(self, text='mouse color', command=self.mouseColorChoose).pack(anchor=SE) # added (mouse color button)
-        Button(self, text='cat color', command=self.catColorChoose).pack(anchor=SE) # added (cat color button)
         self.turtles = []
         self.items = {}
         self.running = 0
@@ -58,66 +47,10 @@ class Arena(Frame):
         self.canvas.bind('<ButtonRelease>', self.release)
         self.dragging = None
 
-    def hoverEvent(self, event):
-        """
-        Changes cat color to black when mouse hovers over it.
-        This function is called from the motion event handler,
-        changes the color when the mouse is located between boundary
-        coordinates of cat object.
-        """
-        marked = False
-        for v1 in self.turtles[2].getshape():
-            x = v1.x
-            y = v1.y
-            for v2 in self.turtles[2].getshape():
-                x2 = v2.x
-                y2 = v2.y
-                bool1 = x < event.x and event.x < x2
-                bool2 = x > event.x and event.x > x2
-                bool3 = y < event.y and event.y < y2
-                bool4 = y > event.y and event.y > y2
-                if (bool1 and bool3) or (bool2 and bool4) or (bool1 and bool4) or (bool2 and bool3):
-                    self.turtles[2].style['fill'] = '#000000' # change color to black
-                    self.update(self.turtles[2])
-                    marked = True
-                    break
-        if not marked:
-            self.turtles[2].style['fill'] = self.turtles[2].color # set color back to color before hovering
-        self.update(self.turtles[2])
-
-    def catColorChoose(self):
-        """Button to choose cat color."""
-        result = askcolor(color='#F5F5F5', title='Choose the Cat Color') # pop up color picker window
-        self.turtles[2].style['fill'] = result[1] # pull out hex color, set it to cat fill
-        self.turtles[2].color = result[1] # save color as cat local variable
-        self.update(self.turtles[2])
-
-    def mouseColorChoose(self):
-        """Button to choose mouse color."""
-        result = askcolor(color='#F5F5F5', title='Choose the Mouse Color') # pop up color picker window
-        self.turtles[1].style['fill'] = result[1] # pull out hex color, set it to mouse fill
-        self.update(self.turtles[1])
-
-    def aboutMenu(self):
-        """Creates a popup about window with info and picture."""
-        win = Toplevel() # create new Toplevel window
-        win.config(width=350, height=150) # set size of window
-        win.title('About CS9H Turtle Arena') # set title
-        Label(win,  text='CS9H Project 5, Turtle Arena').pack() # add label
-        Label(win, text='by Zack Mayeda').pack() # add more info
-        Button(win, text='OK', command=win.destroy).pack() # add button to close window
-        pic = PhotoImage(file="bridge.gif") # create photo widget
-        Button(win, image=pic).pack() # add photo
-        win.focus_set()          # take over input focus
-        win.grab_set()           # disable other windows while open
-        win.wait_window()        # wait here until win destroyed
-
     def reset(self):
         """Stops the simulation if it's running, and resets the objects to their original values."""
         if self.running == 1:
             self.stop()
-        self.turtles[1].style['fill'] = self.turtles[1].originalColor # set mouse back to original color
-        self.turtles[2].style['fill'] = self.turtles[2].originalColor # set cat back to original color
         for turtle in self.turtles:
             turtle.reset() # reset turtles to original position and heading using built in functions
             self.update(turtle)
@@ -133,7 +66,7 @@ class Arena(Frame):
                 return
 
     def motion(self, event):
-        self.hoverEvent(event) # added (call hoverEvent function that changes color to black)
+        # self.hoverEvent(event) # added (call hoverEvent function that changes color to black)
         drag = Vector(event.x, event.y)
         if self.dragging:
             self.dragging.position = self.start + drag - self.dragstart

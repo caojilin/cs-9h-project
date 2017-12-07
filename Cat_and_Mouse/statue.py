@@ -29,5 +29,5 @@ class Statue(Turtle):       #### Inherit behavior from Turtle
         coords = []
         for i in range(0,360,10):
             angle = i * pi/180
-            coords = coords + [Vector(200 + scale_factor*math.cos(angle), 200 + scale_factor*math.sin(angle))]
+            coords = coords + [Vector(200 + scale_factor*math.sin(angle), 200 + scale_factor*math.cos(angle))]
         return coords
