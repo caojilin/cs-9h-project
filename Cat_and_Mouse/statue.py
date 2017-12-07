@@ -1,33 +1,22 @@
 from Turtle import Turtle
+from math import cos, sin, pi
 from Vector import *
 from Color import *
-import math
 
-scale_factor = 50       # 1 meter = scale_factor pixels
+scalar = 50
 
-class Statue(Turtle):       #### Inherit behavior from Turtle
-    """The statue that is stationary."""
-
-    def __init__(self, position, fill=green, **style):
-        """Initiates the turle with heading 0 and calls turtle init method."""
+class Statue(Turtle):
+    """a circular Statue doesn't move"""
+    def __init__(self, position,fill=red):
         heading = 0
-        Turtle.__init__(self, position, heading, fill=fill, **style)
-
-    def getnextstate(self):
-        """No movement."""
-        return self.position, self.heading
-
-    def reset(self):
-        """Resets the position of the statue to its original position (should be no change)."""
-        heading = 0
+        self.position = position
+        self.radius = 1
+        Turtle.__init__(self, position, heading, fill=fill)
 
     def getshape(self):
-        """
-        Return a list of vectors giving the polygon for this statue.
-        Returns a list of coordinates on a circle at 10 degree increments of all 360 degrees.
-        """
+        """Return a list of vectors giving the polygon for this turtle"""
         coords = []
-        for i in range(0,360,10):
-            angle = i * pi/180
-            coords = coords + [Vector(200 + scale_factor*math.sin(angle), 200 + scale_factor*math.cos(angle))]
+        for i in range(0, 360, 10):
+            angle = pi * i/180
+            coords = coords + [self.position + Vector(scalar * cos(angle), scalar * sin(angle))]
         return coords

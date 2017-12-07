@@ -25,3 +25,6 @@ class Turtle:
     def setstate(self, state):
         """Update the state of the turtle."""
         self.position, self.heading = state
+
+    def reset(self):
+        """reset its original values"""
